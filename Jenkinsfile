@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    sh 'echo "SSH private key is located at $env.BRANCH_NAME"'
     stages {
         stage('Main-Build') {
             when {
